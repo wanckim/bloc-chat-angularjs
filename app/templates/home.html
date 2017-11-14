@@ -3,3 +3,7 @@
 <div ng-repeat="room in home.rooms">
   {{room.$value}}
 </div>
+
+<div ng-controller="ModalCtrl as modal">
+  <button type="button" ng-click="modal.open()">Create New Chat Room</button>
+</div>
