@@ -7,7 +7,7 @@
       $uibModalInstance.close({$value: room});
     };
     this.cancel = function() {
-      $uibModalInstance.dismiss({$value: 'cancel'});
+      $uibModalInstance.close({$value: 'cancel'});
     };
   }
 

@@ -1,9 +1,19 @@
-<h1>Home Page</h1>
+<header class="header">
+  <h1>Wan's Chat App</h1>
+  <div class="create-room">
+    <button type="button" ng-click="home.open()" class="create-button">Create New Chat Room</button>
+  </div>
+</header>
 
-<ul ng-repeat="room in home.rooms">
-  <li>{{room.$value}}</li>
-</ul>
+<section class="room-list">
+  <ul ng-repeat="room in home.rooms">
+    <li ng-click="home.allMessages(room.$id)">{{room.$value}}</li>
+  </ul>
+</section>
 
-<div>
-  <button type="button" ng-click="home.open()">Create New Chat Room</button>
-</div>
+<main class="chat-area">
+  <div ng-repeat="msg in home.messages" class="message-list">
+    {{msg.username}}: {{msg.content}}<br>
+    At: {{msg.sentAt}}<br>
+  </div>
+</main>

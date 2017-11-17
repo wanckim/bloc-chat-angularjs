@@ -1,6 +1,12 @@
 (function() {
-  function HomeCtrl(Room, $uibModal) {
+  function HomeCtrl(Room, Message, $uibModal) {
     this.rooms = Room.all;
+
+    // this.messages = Message;
+
+    this.allMessages = function(id) {
+      this.messages = Message.getByRoomId(id);
+    };
 
     this.animationsEnabled = true;
 
@@ -23,5 +29,5 @@
 
   angular
     .module('blocChat')
-    .controller('HomeCtrl', ['Room', '$uibModal', HomeCtrl]);
+    .controller('HomeCtrl', ['Room', 'Message', '$uibModal', HomeCtrl]);
 })();
