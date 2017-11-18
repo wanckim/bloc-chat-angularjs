@@ -13,7 +13,7 @@
 
 <main class="chat-area">
   <div ng-repeat="msg in home.messages" class="message-list">
-    {{msg.username}}: {{msg.content}}<br>
-    At: {{msg.sentAt}}<br>
+    <span>{{msg.username}}: {{msg.content}}<br></span>
+    <span>At: {{msg.sentAt}}<br></span>
   </div>
 </main>

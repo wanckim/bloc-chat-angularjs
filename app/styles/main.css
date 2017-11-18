@@ -1,9 +1,11 @@
 body {
   margin: 0;
+  font-family: 'Helvetica', sans-serif;
+  background-color: #FAFAFA;
 }
 
 header.header {
-  background-color: #eeeeee;
+  background-color: #5f7891;
   width: 100%;
   height: 80px;
   top: 0;
@@ -13,10 +15,12 @@ header.header {
 header.header h1 {
   margin-left: 10px;
   display: inline-block;
+  padding-left: 15px;
+  color: white;
 }
 
 section.room-list {
-  background-color: #dddddd;
+  background-color: #DDD;
   width: 150px;
   height: 500px;
   right: 0;
@@ -30,7 +34,6 @@ section.room-list ul {
 }
 
 section.room-list li {
-  font-family: 'Helvetica', sans-serif;
   font-size: 14px;
   color: #336dcc;
   list-style: none;
@@ -45,11 +48,11 @@ section.room-list li:hover {
 
 main.chat-area {
   display: inline-block;
+  background-color: #FAFAFA;
 }
 
 .message-list {
-  font-family: "Hlevetica", sans-serif;
-  padding: 5px 0 5px 15px;
+  padding: 10px 0 10px 15px;
 }
 
 .create-room {
