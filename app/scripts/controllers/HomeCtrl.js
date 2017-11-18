@@ -4,8 +4,11 @@
 
     // this.messages = Message;
 
-    this.allMessages = function(id) {
+    this.roomTitle = "Select Chat Room";
+
+    this.allMessages = function(id, title) {
       this.messages = Message.getByRoomId(id);
+      this.roomTitle = title;
     };
 
     this.animationsEnabled = true;

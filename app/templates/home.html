@@ -7,11 +7,14 @@
 
 <section class="room-list">
   <ul ng-repeat="room in home.rooms">
-    <li ng-click="home.allMessages(room.$id)">{{room.$value}}</li>
+    <li ng-click="home.allMessages(room.$id, room.$value)">{{room.$value}}</li>
   </ul>
 </section>
 
 <main class="chat-area">
+  <div class="chat-area-header">
+    <span>{{home.roomTitle}}</span>
+  </div>
   <div ng-repeat="msg in home.messages" class="message-list">
     <span class="message" id="username">{{msg.username}}:<br></span>
     <span class="message" id="content">{{msg.content}}</span>

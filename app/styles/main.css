@@ -74,6 +74,18 @@ span.message#sentAt {
   color: #CCC;
 }
 
+.chat-area-header {
+  width: 100%;
+  height: 30px;
+  background-color: #88a9cc;
+  padding-top: 10px;
+}
+.chat-area-header span {
+  font-size: 16px;
+  color: #424242;
+  margin-left: 55%;
+}
+
 .message-list {
   padding: 15px 0 10px 20px;
   /*border-bottom: 2px solid #EEE;*/
