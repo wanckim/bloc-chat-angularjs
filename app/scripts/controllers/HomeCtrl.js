@@ -14,13 +14,13 @@
     this.animationsEnabled = true;
 
     this.open = function(){
-      var modalInstance = $uibModal.open({
+      var createRoom = $uibModal.open({
         animation: this.animationsEnabled,
         ariaLabelledBy: 'modal-title',
         ariaDescribedBy: 'modal-body',
-        templateUrl: '/templates/modal.html',
-        controller: 'ModalInstanceCtrl',
-        controllerAs: 'modal',
+        templateUrl: '/templates/modal/create-room.html',
+        controller: 'CreateRoomCtrl',
+        controllerAs: 'createRoom',
         size: 'md',
       });
     };
