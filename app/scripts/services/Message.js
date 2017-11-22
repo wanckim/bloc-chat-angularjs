@@ -27,19 +27,20 @@
       var CurrentUser = $cookies.get('blocChatCurrentUser');
       var CurrentTime = getTime();
 
-      if (rId) {
-        var newMessage = {
-            content: newMsg,
-            roomId: rId,
-            sentAt: CurrentTime,
-            username: CurrentUser
-        }
-        messages.$add(newMessage).then(function(ref) {
-          var id = ref.key;
-          messages.$indexFor(id);
-        });
-      };
-    }
+      if (!CurrentUser || !rId) { return; }
+
+      var newMessage = {
+          content: newMsg,
+          roomId: rId,
+          sentAt: CurrentTime,
+          username: CurrentUser
+      }
+
+      messages.$add(newMessage).then(function(ref) {
+        var id = ref.key;
+        messages.$indexFor(id);
+      });
+    };
 
     /**
     * @function getTime

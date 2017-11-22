@@ -56,10 +56,10 @@
     * @desc send the input message to send method in Message service
     * @param {String} newMsg
     */
-    this.sendMessage = function(newMsg) {
-      if (newMsg) {
-        Message.send(newMsg, this.roomId);
-      }
+    this.sendMessage = function() {
+      if (!this.newMessage) { return; }
+      Message.send(this.newMessage, this.roomId);
+      this.newMessage = '';
     };
   }
 
