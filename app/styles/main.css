@@ -103,6 +103,12 @@ div.create-room {
 
 button.create-button {
   height: 40px;
+  color: #626262;
+}
+button.create-button:hover {
+  background-color: #AAA;
+  color: #EEE;
+  cursor: pointer;
 }
 
 div.send-message-area {
@@ -119,7 +125,7 @@ input.message-input {
   width: 100%;
   height: 40px;
   padding: 5px 80px 5px 170px;
-  background-color: #AAA;
+  background-color: #B2B2B2;
   font-size: 14px;
   color: #555555;
   border: none;
