@@ -4,7 +4,11 @@ body {
   background-color: #FAFAFA;
 }
 
-header.header {
+.page-wrapper {
+  padding-left: 20px;
+}
+
+.header {
   background-color: #5f7891;
   width: 100%;
   height: 80px;
@@ -12,14 +16,14 @@ header.header {
   left: 0;
 }
 
-header.header h1 {
+.header h1 {
   margin-left: 10px;
   display: inline-block;
   padding-left: 15px;
   color: white;
 }
 
-section.room-list {
+.room-list {
   background-color: #DDD;
   width: 150px;
   height: auto;
@@ -31,12 +35,12 @@ section.room-list {
   z-index: 1;
 }
 
-section.room-list ul {
+.room-list ul {
   margin: 0;
   padding: 0;
 }
 
-section.room-list li {
+.room-list li {
   font-size: 14px;
   color: #336dcc;
   list-style: none;
@@ -44,56 +48,57 @@ section.room-list li {
   right: 0;
   padding: 15px 10px 15px 25px;
 }
-section.room-list li:hover {
+.room-list li:hover {
   color: #ffb22d;
   cursor: pointer;
 }
 
-main.chat-area {
+.chat-area {
   width: 100%;
+  height: 485px;
   display: inline-block;
-  position: absolute;
+  position: relative;
+  overflow-y: scroll;
   background-color: #FAFAFA;
 }
 
-span.message {
+.message {
   color: #888888;
   width: auto;
-  margin: 0 auto;
 }
-span.message#username {
+#username {
   margin-left: 150px;
   font-size: 14px;
   color: #AAA;
 }
-span.message#content {
+#content {
   margin-left: 150px;
 }
-span.message#sentAt {
+#sentAt {
   float: right;
   margin-right: 20px;
   font-size: 12px;
   color: #AAA;
 }
 
-div.chat-area-header {
+.chat-area-header {
   width: 100%;
   height: 30px;
   background-color: #88a9cc;
   padding-top: 10px;
 }
-div.chat-area-header span {
+.chat-area-header span {
   font-size: 16px;
   color: #424242;
   margin-left: 55%;
 }
 
-div.message-list {
+.message-list {
   padding: 15px 0 10px 20px;
   /*border-bottom: 2px solid #EEE;*/
 }
 
-div.create-room {
+.create-room {
   display: inline-block;
   float: right;
   height: 50px;
@@ -101,17 +106,35 @@ div.create-room {
   margin-right: 10px;
 }
 
-button.create-button {
+.btn-default {
+  display: inline-block;
+  background-color: #EEE;
+  padding: 5px 15px;
+  border: 1px solid #CCC;
+  border-radius: 3px;
+  color: #626262;
+  text-decoration: none;
+}
+.btn-default:hover {
+  background-color: #DDD;
+  cursor: pointer;
+}
+.btn-default:hover:active {
+  background-color: #AAA;
+  color: #EEE;
+}
+
+.create-button {
   height: 40px;
   color: #626262;
 }
-button.create-button:hover {
+.create-button:hover {
   background-color: #AAA;
   color: #EEE;
   cursor: pointer;
 }
 
-div.send-message-area {
+.send-message-area {
   position: fixed;
   display: block;
   padding: 0;
@@ -120,7 +143,7 @@ div.send-message-area {
   border-top: 1px solid #EEE;
 }
 
-input.message-input {
+.message-input {
   display: inline-block;
   width: 100%;
   height: 40px;
@@ -131,7 +154,7 @@ input.message-input {
   border: none;
 }
 
-button.send-message-button {
+.send-message-button {
   width: 70px;
   height: 50px;
   border: none;
@@ -142,7 +165,10 @@ button.send-message-button {
   font-weight: bold;
   color: #FFF;
 }
-button.send-message-button:hover {
+.send-message-button:hover {
   background-color: #4853ad;
   cursor: pointer;
+}
+.send-message-button:hover:active {
+  background-color: #181d4c;
 }
